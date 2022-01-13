@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import SasukeImg from './images/sasuke.png'
 import styled from 'styled-components';
 import Quotes from './components/quotes/quotes';
 import { getQuote } from './services/quotesService/quotesService';
+import typewriterSound from '../src/sounds/typewriter-hit.wav';
 
-const audio = new Audio
+const audio = new Audio(typewriterSound);
 
 const Content = styled.div`
   height: 100vh;
@@ -19,18 +20,31 @@ const SasukeImgComponent = styled.img`
 `
 
 function App() {
+  const isMounted = useRef(true);
 
-  const [quoteText, setQuoteText] = useState({ quote: '', speaker: '' });
+  const [quoteText, setQuoteText] = useState({ quote: 'Loading...', speaker: 'Loading...' });
 
   const onUpdate = async () => {
     const quote = await getQuote();
-    setQuoteText(quote);
+
+    if (isMounted.current){
+      /* audio.play(); */
+      setQuoteText(quote);
+    };
   }
+
+  useEffect(() => {
+    onUpdate();
+
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
 
   return (
     <Content>
       <Quotes {...quoteText} onUpdate={onUpdate} />
-      <SasukeImgComponent src={SasukeImg} alt="o rei" />
+      <SasukeImgComponent src={SasukeImg} alt="Sasuke" />
     </Content>
   );
 }
