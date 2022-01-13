@@ -22,4 +22,4 @@ $ npm start
 And it will open a tab in your browser.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](http://github.com/volinha/simple-quotes-generator/blob/main/LICENSE.md).
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/volinha/simple-quote-generator/blob/f8074485dd6299f550ec6efd16f4bcb9ff7b8e38/LICENSE.md).
