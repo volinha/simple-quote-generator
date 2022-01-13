@@ -16,10 +16,10 @@ $ npm install
 Start the server available on [simple-quotes-server](https://github.com/volinha/simple-quote-server) and
 
 ```bash
-    npm start
+$ npm start
 ```
 
 And it will open a tab in your browser.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/volinha/simple-quotes-generator/blob/main/LICENSE.md)
+This project is licensed under the MIT License - see the [LICENSE.md](http://github.com/volinha/simple-quotes-generator/blob/main/LICENSE.md).
