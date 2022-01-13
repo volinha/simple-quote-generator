@@ -13,7 +13,7 @@ $ npm install
 
 ## Running
 
-Start the server available on [simple-quotes-server](https://github.com/volinha/simple-quote-server) and
+Start the server available on [simple-quotes-server](https://github.com/volinha/simple-quotes-server) and
 
 ```bash
 $ npm start
