@@ -38,3 +38,9 @@ test('should call api on button click and update its text', async () => {
 
   expect(quoteEl).toBeInTheDocument();
 })
+
+test('should call api on start and renders response', async () => {
+  render(<App />);
+  const quoteEl = await screen.findByText(response.quote);
+  expect(quoteEl).toBeInTheDocument();
+})
