@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { string } from "prop-types";
 
 export const Button = styled.button`
-    background: #DC8726;
+    background: #222;
     color: #FFF;
     border: none;
     border-radius: 0;
@@ -15,7 +15,8 @@ export const Button = styled.button`
     transition: ease all 0.3s;
 
     &:hover{
-        background: #a40000;
+        background: #DDD;
+        color: #222;
     }
 `;
 
