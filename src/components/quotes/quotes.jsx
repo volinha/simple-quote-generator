@@ -5,8 +5,10 @@ import Button from "../Button/button";
 const Quotes = ({ quote, speaker, onUpdate }) => {
     return (
         <Wrapper>
-            <Quote role='p'>{quote}</Quote>
-            <Speaker>- {speaker}</Speaker>
+            <QuoteWrapper>
+                <Quote role='p'>{quote}</Quote>
+                <Speaker>- {speaker}</Speaker>
+            </QuoteWrapper>
             <Button onClick={onUpdate}>I'm Feeling Bufto</Button>
         </Wrapper>
     );
@@ -15,7 +17,7 @@ const Quotes = ({ quote, speaker, onUpdate }) => {
 Quotes.propTypes = {
     quote: string,
     speaker: string,
-    onUpdate: func 
+    onUpdate: func
 }
 
 const Quote = styled.p`
@@ -33,6 +35,15 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+`
+
+const QuoteWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    background: rgba(0,0,0,0.5);
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
 `
 
 export default Quotes;
